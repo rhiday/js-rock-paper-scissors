@@ -5,6 +5,49 @@
     </head>
 
     <body>
-        
+        <script>
+
+            let playerSelection = prompt("Type Rock, Paper or Scissors")
+            let computerSelection = computerPlay();
+
+            /* Selects rock, paper or scissors randomly */
+            
+            function computerPlay() {
+                let options = ['Rock', 'Paper', 'Scissors'];
+                return (options[Math.floor(Math.random()*3)]);
+            }
+
+            computerPlay();
+
+            /* Plays one round */
+
+            function playRound(playerSelection, computerSelection) {
+
+                /* Win condition */
+
+                if (playerSelection == 'Rock' && computerSelection == 'Scissors') console.log("You win!")
+                    else if (playerSelection == 'Paper' && computerSelection == 'Rock') console.log("You win!")
+                        else if (playerSelection == 'Scissors' && computerSelection == 'Paper') console.log("You win!");
+
+
+                /*let win = (playerSelection == 'Rock' && computerSelection == 'Scissors') ? "Win"
+                            : (playerSelection == 'Paper' && computerSelection == 'Rock') ? "Win"
+                                : (playerSelection == 'Scissors' && computerSelection == 'Paper') ? "Win" : "invalid";
+                */
+
+                
+
+                /* Lose condition */
+
+                /* Tie condition */
+
+            }
+
+
+
+            /* Plays for five rounds */
+
+
+        </script>
     </body>
 </html>
