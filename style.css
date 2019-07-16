@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #004579;
+}
+
+
+section {
+    outline: 0.1rem solid red !important; 
+}
+
+div {
+    outline: 0.1rem solid red !important; 
+}
+
+/* SCORE */
+
+.score {
+    display: block;
+    margin: 3rem;
+    padding: 3rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.player-score {
+    float:left;
+}
+
+.computer-score {
+    float: right;
+}
+
+/* GAME AREA */
+
+.game-area {
+    display: block;
+    margin: 3rem;
+    padding: 2rem;
+    text
+}
+
+.hand-compare {
+    position: relative;
+    text-align: center;
+    
+}
+
+.selector {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+button {
+    font-size: 6rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background-color: transparent;
+    border: none;
+}

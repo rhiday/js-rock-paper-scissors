@@ -1,85 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>RPS</title>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <script>
+        <section class="score">
+            <div class="player-score">
+                <label>Player</label>
+            </div>
 
-            let playerScore = 0;
-            let computerScore = 0;
+            <div class="computer-score">
+                <label>Computer</label>
+            </div>
 
-            game();
+        </section>
 
-            /* Selects rock, paper or scissors randomly */
-            
-            function computerPlay() {
-                let options = ['Rock', 'Paper', 'Scissors'];
-                return (options[Math.floor(Math.random()*3)]);
-            }
+        <section class="game-area">
+            <div class="hand-compare">
+                <img class="player-hand" src="assets/paper.png">
+                <img class="computer-hand" src="assets/rock.png">
 
-            /* Plays one round */
+            </div>
 
-            function playRound(playerSelection, computerSelection) {
+            <div class="selector">
+                <button class="rock">&#128074</button>
+                <button class="paper">&#128075</button>
+                <button class="scissors">&#9996</button>
+            </div>
 
-                /* Win condition */
+        </section>
 
-                if ((playerSelection == 'Rock' && computerSelection == 'Scissors') ||
-                    (playerSelection == 'Paper' && computerSelection == 'Rock') ||
-                    (playerSelection == 'Scissors' && computerSelection == 'Paper')) {
-                        console.log("You win! " + playerSelection + " beats " + computerSelection);
-
-                        playerScore++;
-                    }
-
-                /* Lose condition */
-
-                else if ((playerSelection == 'Rock' && computerSelection == 'Paper') ||
-                    (playerSelection == 'Paper' && computerSelection == 'Scissors') ||
-                    (playerSelection == 'Scissors' && computerSelection == 'Rock')) {
-                        console.log("You lose! " + computerSelection + " beats " + playerSelection);
-                        
-                        computerScore++;
-                    }
-
-                /* Tie condition */
-
-                else if (playerSelection == computerSelection) {
-                    console.log("Tie! You both chose " + playerSelection);
-                }
-
-            }
-
-            /* Plays for five rounds */
-
-            function game() {
-
-                for (let i = 1; i <= 5 ; i++) {
-
-                    let playerSelection = prompt("Round " + i + "! Type Rock, Paper or Scissors")
-                    let computerSelection = computerPlay();
-
-                    if(playerSelection !== 'Rock' || 'Paper' || 'Scissors') {
-                        console.log("Please choose the correct option");
-                    }
-
-                    playRound(playerSelection, computerSelection);
-                }
-
-                if(playerScore > 2) {
-                    alert("You won " + playerScore + " points! So you're the winner!");
-                }
-
-                else if(computerScore > 2) {
-                        alert("Computer won " + computerScore + " points! So computer is the winner!");
-                }
-
-                else if(playerScore == playerScore) {
-                    alert("Game tied.");
-                }
-            }
-
-        </script>
+        <script src="app.js"></script>
     </body>
 </html>
